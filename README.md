@@ -28,9 +28,10 @@ The microservices include:
  - **Servie Discovery(Eureka)**: Central service registry for all services to register and discover each other.
  - **API Gateway**: Routes requests to the appropriate microservice.
 
-## Future Enhamcement
+## Future Enhancement
  - **Applicant Service**
  - **Job Application Service**
+ - **Job Listing with Pagination**
  - **Application Tracking Status Service**
  - **Docker Containerization**
  - **API Documentation**
