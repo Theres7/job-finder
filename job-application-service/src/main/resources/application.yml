@@ -1,0 +1,42 @@
+server:
+  port: 8095
+
+spring:
+  application:
+    name: job-application-service
+
+  #PostgreSQL Database Configuration
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/jobapplication_db
+    username: postgres
+    password: <password>
+
+  #JPA/ Hibernate Configuration
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
+    hibernate.ddl-auto: update
+
+#Logging
+logging:
+  level:
+    org:
+      springframework:
+        web: INFO
+      hibernate: ERROR
+    guru:
+      springframework:
+        controllers: DEBUG
+
+  file:
+    name: logs/spring-boot-logging.log
+
+  #Eureka
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+    register-with-eureka: true
+    fetch-registry: true
